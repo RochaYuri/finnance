@@ -17,6 +17,11 @@
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "mini-css-extract-plugin": "^2.7.5",
+    "nodemon": "^2.0.22",
     "webpack": "^5.81.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "json-serve": "^0.1.0"
   }
 }
