@@ -1,0 +1,112 @@
+{
+  "transactions": [
+    {
+      "name": "Atacante",
+      "value": 30,
+      "type": "credit",
+      "id": 1
+    },
+    {
+      "name": "Yuri",
+      "value": 60,
+      "type": "debit",
+      "id": 2
+    },
+    {
+      "name": "Atacante",
+      "value": 50,
+      "type": "debit",
+      "id": 3
+    },
+    {
+      "name": "Teste",
+      "value": 80,
+      "type": "credit",
+      "id": 4
+    },
+    {
+      "name": "Rafaela",
+      "value": 55,
+      "type": "credit",
+      "id": 5
+    },
+    {
+      "name": "Yuri",
+      "value": 84,
+      "type": "debit",
+      "id": 6
+    },
+    {
+      "name": "Yuri",
+      "value": 84,
+      "type": "debit",
+      "id": 7
+    },
+    {
+      "name": "Yuri",
+      "value": 85,
+      "type": "debit",
+      "id": 8
+    },
+    {
+      "name": "Yuri",
+      "value": 145,
+      "type": "debit",
+      "id": 9
+    },
+    {
+      "name": "Yuri",
+      "value": 89,
+      "type": "credit",
+      "id": 10
+    },
+    {
+      "name": "Yuri",
+      "value": 10,
+      "type": "credit",
+      "id": 11
+    },
+    {
+      "name": "Yuri",
+      "value": 0,
+      "type": "debit",
+      "id": 12
+    },
+    {
+      "name": "Yuri",
+      "value": 45,
+      "type": "debit",
+      "id": 13
+    },
+    {
+      "name": "Yuri",
+      "value": 45,
+      "type": "debit",
+      "id": 14
+    },
+    {
+      "name": "Yuri",
+      "value": 85,
+      "type": "debit",
+      "id": 15
+    },
+    {
+      "name": "Yuri",
+      "value": 350,
+      "type": "credit",
+      "id": 16
+    },
+    {
+      "name": "Yuri",
+      "value": 96,
+      "type": "debit",
+      "id": 17
+    },
+    {
+      "name": "Yuri",
+      "value": 98,
+      "type": "credit",
+      "id": 18
+    }
+  ]
+}

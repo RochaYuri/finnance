@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #202020;
+  --nav-title-color: #50b34d;
+  --nav-button-text-color: #d6d6d6;
+  --nav-button-text-color-hover: #434443;
+  --main-button-background-color: #075704;
+  --main-button-text-color: #bcc2bc;
+  --main-button-text-color-hover: #50b34d;
+  --form-button-background-color: #bcc2bc;
+  --form-button-background-color-hover: #bcc2bc;
+  --form-button-text-color: #1e531c;
+  --form-button-text-color-hover: #bcc2bc;
+  --label-form: #bcc2bc;
+  --transaction-data-text: #fff;
+  --sub-text: #fff;
+  --credit-transaction-border: #429c17;
+  --debit-transaction-border: #ce1414;
+  --positive-balance: #429c17;
+  --neutral-balance: #999b31;
+  --negative-balance: #ce1414;
+  --footer-text-color: #e7e7e7;
+  --footer-link-text-color: #a39f9fda;
+  --footer-link-text-color-hover: #15e7e7;
+}
+
+#body {
+  transition: 0.4s;
+  background-color: var(--background-color);
+}
+
+header {
+  width: 100vw;
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.nav-title {
+  transition: 0.4s;
+  font-size: 5.5em;
+  /* font-family: "Bebas Neue", cursive; */
+  font-family: "Righteous", cursive;
+  color: var(--nav-title-color);
+}
+
+#navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-button {
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  font-size: 2em;
+  font-family: "Lilita One", cursive;
+  color: var(--nav-button-text-color);
+  transition: 0.4s;
+}
+
+.nav-button:hover {
+  color: var(--nav-button-text-color-hover);
+  cursor: pointer;
+}
+
+.main-content {
+  width: 100vw;
+}
+
+#main-buttons-container {
+  min-height: 62vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "add-transactions-div edit-transactions-div remove-transactions-div show-transactions-div";
+  place-items: center;
+  gap: 30px;
+}
+
+.main-buttons {
+  text-decoration: none;
+  background-color: var(--main-button-background-color);
+  border: 3px solid var(--main-button-background-color);
+  border-radius: 7px;
+  padding: 2px 15px;
+  font-size: 1.4em;
+  font-family: "Lilita One", cursive;
+  color: var(--main-button-text-color);
+  transition: 0.4s;
+}
+
+.main-buttons:hover {
+  color: var(--main-button-text-color-hover);
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: 0 0 0.2em var(--main-button-text-color-hover);
+}
+
+.add-transactions-div,
+.edit-transactions-div .remove-transactions-div,
+.show-transactions-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.4s;
+}
+
+.add-transactions-div {
+  grid-area: add-transactions-div;
+}
+
+.add-transactions-div:hover {
+  cursor: pointer;
+}
+
+.label-form {
+  font-size: 1.5em;
+  font-family: "Righteous", cursive;
+  padding: 0 10px;
+  color: var(--label-form);
+}
+
+.input-text-form {
+  width: 9em;
+  font-size: 1.3em;
+  font-family: "Righteous", cursive;
+  padding: 3px;
+}
+
+.input-number-form {
+  width: 9.2em;
+  font-size: 1.3em;
+  padding: 3px;
+}
+
+.input-radio-form {
+  margin: 25px 0;
+}
+
+.button-form {
+  transition: 0.2s;
+  background-color: var(--form-button-background-color);
+  color: var(--form-button-text-color);
+  border: 2px solid var(--form-button-background-color);
+  padding: 5px 15px;
+  border-radius: 7px;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.button-form:hover {
+  background-color: transparent;
+  color: var(--form-button-text-color-hover);
+  box-shadow: 0 0 0.2em var(--form-button-background-color-hover);
+  cursor: pointer;
+}
+
+#add-transaction-form {
+  padding: 3em 0;
+}
+
+.edit-transactions-div {
+  grid-area: edit-transactions-div;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#edit-transaction-form {
+  padding: 2em 0;
+}
+
+#edit-transaction-id-input,
+#remove-transaction-id-input {
+  width: 65px;
+}
+
+#remove-transaction-form {
+  padding: 2em 0;
+}
+
+.remove-transactions-div {
+  grid-area: remove-transactions-div;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.show-transactions-div {
+  grid-area: show-transactions-div;
+  margin: 2em 0;
+}
+
+#show-transactions-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.transaction-data-div {
+  width: 60%;
+  text-align: center;
+  margin: 20px 0 0 0;
+  padding: 15px 0;
+  color: var(--transaction-data-text);
+  font-size: 1.3em;
+  font-family: "Poiret One", cursive;
+}
+
+.sub {
+  text-align: center;
+  font-size: 1.3em;
+  font-family: "Poiret One", cursive;
+  color: var(--sub-text);
+  margin: 15px;
+}
+
+.credit-sub {
+  color: var(--credit-transaction-border);
+}
+
+.debit-sub {
+  color: var(--debit-transaction-border);
+}
+
+.debit {
+  border: 1.5px solid var(--debit-transaction-border);
+  border-radius: 15px;
+}
+
+.credit {
+  border: 1.5px solid var(--credit-transaction-border);
+  border-radius: 15px;
+}
+
+.account-balance-container {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#account-balance {
+  font-size: 3.5em;
+  font-family: "Righteous", cursive;
+}
+
+.positive {
+  color: var(--positive-balance);
+}
+
+.neutral {
+  color: var(--neutral-balance);
+}
+
+.negative {
+  color: var(--negative-balance);
+}
+
+.footer {
+  min-height: 3vh;
+  width: 100vw;
+  background-color: #5e5e5e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--footer-text-color);
+}
+
+.footer a {
+  color: var(--footer-link-text-color);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--footer-link-text-color-hover);
+}
+
+#developer {
+  font-size: 1.1em;
+}

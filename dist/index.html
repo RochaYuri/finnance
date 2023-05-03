@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle financeiro</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="../public/index.js" type="module" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Poiret+One&family=Righteous&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="body" data-theme="">
+    <header>
+        <button class="nav-button">Repositório</button>
+        <h4 class="nav-title">Controle Financeiro</h4>
+        <button class="nav-button" id="theme-switcher">Alterar tema</button>
+    </header>
+    <main class="main-content">
+        <section id="main-buttons-container">
+            <div class="add-transaction-div">
+                <button class="main-buttons" id="add-transaction-btn">Cadastrar nova transação</button>
+            </div>
+            <div class="edit-transaction-div">
+                <button class="main-buttons" id="edit-transaction-btn">Editar uma transação</button>
+            </div>
+            <div class="remove-transaction-div">
+                <button class="main-buttons" id="remove-transaction-btn">Excluir uma transação</button>
+            </div>
+            <div class="show-transactions-div">
+                <button class="main-buttons" id="show-transactions-btn">Ver lista de transações</button>
+            </div>
+        </section>
+        <section class="account-balance-container">
+            <p id="account-balance">Total de saldo na conta: R$</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <div id="footer-container">
+            <p id="developer">Site desenvolvido por <a target="_blank" href="https://github.com/RochaYuri">RochaYuri</a>
+                ||
+                Código aberto no <a target="_blank" href="https://github.com/RochaYuri/rochayuri">GitHub</a>!</p>
+        </div>
+    </footer>
+</body>
+
+</html>

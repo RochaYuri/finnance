@@ -1,0 +1,22 @@
+{
+  "name": "ex04",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "json-server": "json-server --watch db.json",
+    "babel": "babel src --out-dir public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "webpack": "^5.81.0"
+  }
+}
