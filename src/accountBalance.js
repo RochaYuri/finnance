@@ -1,6 +1,6 @@
-const accountBalance = document.getElementById("account-balance");
-
 module.exports = async function getValues() {
+  const accountBalance = document.getElementById("account-balance");
+
   const response = await fetch("http://localhost:3000/transactions");
 
   const transactions = await response.json();
