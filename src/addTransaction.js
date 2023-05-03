@@ -1,5 +1,3 @@
-const div = document.querySelector(".add-transaction-div");
-
 const createLabel = (text, forInput) => {
   const label = document.createElement("label");
   label.innerText = text;
@@ -68,6 +66,7 @@ function createAddForm() {
     br4,
     submitBtn
   );
+  const div = document.querySelector(".add-transaction-div");
   div.appendChild(form);
 }
 
