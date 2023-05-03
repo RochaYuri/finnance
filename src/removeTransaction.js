@@ -37,7 +37,7 @@ const createBr = () => {
   return document.createElement("br");
 };
 
-export const createRemoveForm = () => {
+function createRemoveForm() {
   const form = document.createElement("form");
   form.setAttribute("id", "remove-transaction-form");
   const transactionIdLabel = createLabel(
@@ -55,9 +55,9 @@ export const createRemoveForm = () => {
   const submitBtn = createButton("Remover", "submit", "submit-btn");
   form.append(transactionIdLabel, transactionIdInput, br1, br2, submitBtn);
   div.appendChild(form);
-};
+}
 
-export async function removeTransactionResponse(ev) {
+async function removeTransactionResponse(ev) {
   const id = document.getElementById("remove-transaction-id-input").value;
   async function responseFunction() {
     const response = await fetch(`http://localhost:3000/transactions/${id}`, {
@@ -71,3 +71,8 @@ export async function removeTransactionResponse(ev) {
   }
   responseFunction();
 }
+
+module.exports = {
+  response: removeTransactionResponse,
+  createForm: createRemoveForm,
+};

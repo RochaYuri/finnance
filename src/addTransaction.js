@@ -37,7 +37,7 @@ const createBr = () => {
   return document.createElement("br");
 };
 
-export const createAddForm = () => {
+function createAddForm() {
   const form = document.createElement("form");
   form.setAttribute("id", "add-transaction-form");
   const nameLabel = createLabel("Nome: ", "add-name-input");
@@ -69,9 +69,9 @@ export const createAddForm = () => {
     submitBtn
   );
   div.appendChild(form);
-};
+}
 
-export async function addResponseFunction(ev) {
+async function addResponseFunction(ev) {
   ev.preventDefault();
 
   let choice;
@@ -98,3 +98,8 @@ export async function addResponseFunction(ev) {
   const savedTransaction = await response.json();
   console.log(savedTransaction);
 }
+
+module.exports = {
+  response: addResponseFunction,
+  createForm: createAddForm,
+};

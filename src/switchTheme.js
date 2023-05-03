@@ -1,6 +1,6 @@
 const root = document.querySelector(":root");
 
-export function switchTheme() {
+function switchTheme() {
   if (body.dataset.theme === "light") {
     root.style.setProperty("--background-color", "#202020");
     root.style.setProperty("--nav-title-color", "#50b34d");
@@ -54,7 +54,7 @@ export function switchTheme() {
   }
 }
 
-export function preferedTheme() {
+function preferedTheme() {
   const local = localStorage.getItem("preferedTheme");
   if (local === "light") {
     root.style.setProperty("--background-color", "#a5c79c");
@@ -104,3 +104,8 @@ export function preferedTheme() {
     root.style.setProperty("--footer-link-text-color-hover", "#15e7e7");
   }
 }
+
+module.exports = {
+  switchTheme: switchTheme,
+  preferedTheme: preferedTheme,
+};

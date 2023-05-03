@@ -36,7 +36,7 @@ const createBr = () => {
   return document.createElement("br");
 };
 
-export const createEditForm = () => {
+function createEditForm() {
   const form = document.createElement("form");
   form.setAttribute("id", "edit-transaction-form");
   const transactionIdLabel = createLabel(
@@ -84,9 +84,9 @@ export const createEditForm = () => {
     submitBtn
   );
   div.appendChild(form);
-};
+}
 
-export async function editTransactionRepsonse(ev) {
+async function editTransactionRepsonse(ev) {
   ev.preventDefault();
   const id = document.getElementById("edit-transaction-id-input").value;
   const newName = document.getElementById("edit-name-input").value;
@@ -120,3 +120,8 @@ export async function editTransactionRepsonse(ev) {
     console.log(editedTransaction);
   }
 }
+
+module.exports = {
+  response: editTransactionRepsonse,
+  createForm: createEditForm,
+};

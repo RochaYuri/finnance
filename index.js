@@ -1,17 +1,11 @@
-import { createAddForm, addResponseFunction } from "./src/addTransaction.js";
-import {
-  createEditForm,
-  editTransactionRepsonse,
-} from "./src/editTransaction.js";
-import {
-  createRemoveForm,
-  removeTransactionResponse,
-} from "./src/removeTransaction.js";
-import { showTransactions } from "./src/showTransactions.js";
-import { getValues } from "./src/accountBalance.js";
-import { switchTheme, preferedTheme } from "./src/switchTheme.js";
+const addTransactionModule = require("./src/addTransaction.js");
+const editTransactionModule = require("./src/editTransaction.js");
+const removeTransactionModule = require("./src/removeTransaction.js");
+const showTransactionModule = require("./src/showTransactions.js");
+const getValues = require("./src/accountBalance.js");
+const theme = require("./src/switchTheme.js");
 
-window.addEventListener("DOMContentLoaded", preferedTheme);
+window.addEventListener("DOMContentLoaded", theme.preferedTheme);
 
 const addTransactionBtn = document.getElementById("add-transaction-btn");
 const editTransactionBtn = document.getElementById("edit-transaction-btn");
@@ -29,9 +23,9 @@ addTransactionBtn.addEventListener("click", (ev) => {
   ev.preventDefault();
   if (indexAddTr === 1) {
     indexAddTr = 2;
-    createAddForm();
+    addTransactionModule.createForm;
     const form = document.getElementById("add-transaction-form");
-    form.addEventListener("submit", addResponseFunction);
+    form.addEventListener("submit", addTransactionModule.response);
     document.getElementById("add-name-input").value = "";
     document.getElementById("add-value-input").value = "";
   } else {
@@ -44,10 +38,10 @@ addTransactionBtn.addEventListener("click", (ev) => {
 editTransactionBtn.addEventListener("click", (ev) => {
   ev.preventDefault();
   if (indexEditTr === 1) {
-    createEditForm();
+    editTransactionModule.createForm;
     indexEditTr = 2;
     const form = document.getElementById("edit-transaction-form");
-    form.addEventListener("submit", editTransactionRepsonse);
+    form.addEventListener("submit", editTransactionModule.response);
   } else {
     document.getElementById("edit-transaction-form").remove();
     indexEditTr = 1;
@@ -59,9 +53,9 @@ removeTransactionsBtn.addEventListener("click", (ev) => {
   ev.preventDefault();
   if (indexRemoveTr === 1) {
     indexRemoveTr = 2;
-    createRemoveForm();
+    removeTransactionModule.createForm;
     const form = document.getElementById("remove-transaction-form");
-    form.addEventListener("submit", removeTransactionResponse);
+    form.addEventListener("submit", removeTransactionModule.response);
   } else {
     document.getElementById("remove-transaction-form").remove();
     indexRemoveTr = 1;
@@ -72,7 +66,7 @@ removeTransactionsBtn.addEventListener("click", (ev) => {
 showTransactionsBtn.addEventListener("click", (ev) => {
   if (indexShowTr === 1) {
     indexShowTr = 2;
-    showTransactions();
+    showTransactionModule;
   } else {
     document.getElementById("show-transactions-container").remove();
     document.querySelector(".sub").remove();
@@ -80,6 +74,6 @@ showTransactionsBtn.addEventListener("click", (ev) => {
   }
 });
 
-switchThemeBtn.addEventListener("click", switchTheme);
+switchThemeBtn.addEventListener("click", theme.switchTheme);
 
-getValues();
+getValues;

@@ -6,7 +6,7 @@ const createContainer = () => {
   externalDiv.appendChild(container);
 };
 
-const createTransactionDiv = (transaction) => {
+function createTransactionDiv(transaction) {
   const container = document.querySelector("#show-transactions-container");
   const div = document.createElement("div");
   div.classList.add("transaction-data-div");
@@ -30,9 +30,9 @@ const createTransactionDiv = (transaction) => {
   container.appendChild(div);
 
   return div;
-};
+}
 
-export const showTransactions = () => {
+module.exports = function showTransactions() {
   async function getTransactions() {
     const response = await fetch("http://localhost:3000/transactions");
     console.log(response);

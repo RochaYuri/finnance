@@ -1,6 +1,6 @@
 const accountBalance = document.getElementById("account-balance");
 
-export async function getValues() {
+module.exports = async function getValues() {
   const response = await fetch("http://localhost:3000/transactions");
 
   const transactions = await response.json();
@@ -22,4 +22,4 @@ export async function getValues() {
   } else if (accountBalanceSum < 0) {
     accountBalance.classList.add("negative");
   }
-}
+};
