@@ -1,5 +1,3 @@
-const div = document.querySelector(".remove-transaction-div");
-
 const createLabel = (text, forInput) => {
   const label = document.createElement("label");
   label.innerText = text;
@@ -54,6 +52,7 @@ function createRemoveForm() {
   const br2 = createBr();
   const submitBtn = createButton("Remover", "submit", "submit-btn");
   form.append(transactionIdLabel, transactionIdInput, br1, br2, submitBtn);
+  const div = document.querySelector(".remove-transaction-div");
   div.appendChild(form);
 }
 

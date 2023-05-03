@@ -1,6 +1,5 @@
-const root = document.querySelector(":root");
-
 function switchTheme() {
+  const root = document.querySelector(":root");
   if (body.dataset.theme === "light") {
     root.style.setProperty("--background-color", "#202020");
     root.style.setProperty("--nav-title-color", "#50b34d");
@@ -55,6 +54,7 @@ function switchTheme() {
 }
 
 function preferedTheme() {
+  const root = document.querySelector(":root");
   const local = localStorage.getItem("preferedTheme");
   if (local === "light") {
     root.style.setProperty("--background-color", "#a5c79c");

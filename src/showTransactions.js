@@ -1,8 +1,7 @@
-const externalDiv = document.querySelector(".show-transactions-div");
-
 const createContainer = () => {
   const container = document.createElement("div");
   container.setAttribute("id", "show-transactions-container");
+  const externalDiv = document.querySelector(".show-transactions-div");
   externalDiv.appendChild(container);
 };
 
