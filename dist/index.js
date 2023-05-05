@@ -7,7 +7,7 @@ const theme = require("../src/switchTheme.js");
 
 if (typeof window === "undefined") {
   console.log("Oops, `window` is not defined")
-}
+} else {
 
 window.addEventListener("DOMContentLoaded", theme.preferedTheme);
 
@@ -81,3 +81,4 @@ showTransactionsBtn.addEventListener("click", (ev) => {
 switchThemeBtn.addEventListener("click", theme.switchTheme);
 
 getValues;
+}
