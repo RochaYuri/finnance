@@ -1,9 +1,9 @@
-const addTransactionModule = require("./src/addTransaction.js");
-const editTransactionModule = require("./src/editTransaction.js");
-const removeTransactionModule = require("./src/removeTransaction.js");
-const showTransactionModule = require("./src/showTransactions.js");
-const getValues = require("./src/accountBalance.js");
-const theme = require("./src/switchTheme.js");
+const addTransactionModule = require("./addTransaction.js");
+const editTransactionModule = require("./editTransaction.js");
+const removeTransactionModule = require("./removeTransaction.js");
+const showTransactionModule = require("./showTransactions.js");
+const getValues = require("./accountBalance.js");
+const theme = require("./switchTheme.js");
 
 if (typeof window === "undefined") {
   console.log("Oops, `window` is not defined")
