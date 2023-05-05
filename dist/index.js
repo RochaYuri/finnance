@@ -5,6 +5,10 @@ const showTransactionModule = require("../src/showTransactions.js");
 const getValues = require("../src/accountBalance.js");
 const theme = require("../src/switchTheme.js");
 
+if (typeof window === "undefined") {
+  console.log("Oops, `window` is not defined")
+}
+
 window.addEventListener("DOMContentLoaded", theme.preferedTheme);
 
 const addTransactionBtn = document.getElementById("add-transaction-btn");
