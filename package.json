@@ -6,8 +6,8 @@
   "scripts": {
     "json-server": "json-server --watch db.json",
     "babel": "babel src --out-dir public",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
   },
   "keywords": [],
   "author": "",
