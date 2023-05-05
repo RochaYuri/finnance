@@ -5,7 +5,7 @@ const showTransactionModule = require("./src/showTransactions.js");
 const getValues = require("./src/accountBalance.js");
 const theme = require("./src/switchTheme.js");
 
-window.addEventListener("DOMContentLoaded", theme.preferedTheme);
+// window.addEventListener("DOMContentLoaded", theme.preferedTheme);
 
 const addTransactionBtn = document.getElementById("add-transaction-btn");
 const editTransactionBtn = document.getElementById("edit-transaction-btn");
